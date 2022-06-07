@@ -18,9 +18,21 @@ tl.fromTo(
 );
 tl.fromTo(".text", { x: 30, opacity: 0 }, { x: 0, opacity: 1 }, "<");
 
+tl.fromTo(
+	".cookie",
+	{ y: 0, rotation: "0deg" },
+	{ y: -10, yoyo: true, repeat: -1, rotation: "-20deg", duration: "1" }
+);
+tl.fromTo(
+	"#crumbs",
+	{ y: 0 },
+	{ y: -10, yoyo: true, repeat: -1, duration: "1" },
+	"<"
+);
+
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  console.log("Hello World");
+	console.log("Hello World");
 	gsap.to(".cookie-container", {
 		opacity: 0,
 		y: -100,
